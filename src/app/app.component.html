@@ -1,0 +1,47 @@
+<app-jumbotron></app-jumbotron>
+<br>
+<!--Formulario-->
+<div class="form-group col-lg-8 container-lg" id="formulario">
+    <form clss="form-inline">
+        <input type="text" placeholder="Escribe aquí tu tarea pendiente" class="form-control-lg form-control" [(ngModel)]="tareaImput" name="tarea">
+        <div class="col text-lg-center">
+            <!-- Button trigger modal -->
+            <button type="button submit" class="btn btn-outline-primary text-center" data-toggle="modal" data-target="#exampleModal" (click)="agregarTarea()">
+            Agregar nueva tarea
+          </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">¡Hola!</h5>
+                            <button type="button submit" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+
+                        <div class="modal-body">
+                            Se ha agregado tu tarea con éxito
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button submit" class="btn btn-primary" data-dismiss="modal">¡Perfecto!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+<div class="container card  col-sm-4 text-center bg-light mb-3 border-primary card-columns" *ngFor="let tareasP of ArregloTareas; let i = index" id="tarjeta">
+    <div class="card-body p-3">
+        <h5 class="card-text" id="tituloTarjeta">{{tareasP.tareas}} </h5>
+        <button (click)="eliminarTarea(i)" class="btn btn-outline-success">¡Listo!</button>
+        <br>
+    </div>
+</div>

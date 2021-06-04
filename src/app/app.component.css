@@ -1,0 +1,27 @@
+#tituloPrincipal {
+    text-align: center;
+}
+
+#tituloApp {
+    text-align: center;
+}
+
+#separador {
+    color: blueviolet;
+}
+
+#formulario {
+    position: flex;
+    justify-content: center;
+}
+
+#tituloTarjeta {
+    text-align: center;
+}
+
+#tarjeta {
+    background-color: rgba(244, 247, 248, 0.726);
+    border-radius: 10px;
+    border-color: darkgrey;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
