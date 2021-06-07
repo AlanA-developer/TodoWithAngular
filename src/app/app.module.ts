@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
+import { TareaComponent } from './tarea/tarea.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JumbotronComponent
+    JumbotronComponent,
+    TareaComponent
   ],
   imports: [
     BrowserModule,
